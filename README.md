@@ -5,8 +5,11 @@
 ### Angular user-management task2 extention
 
 4.1 Write unit tests for components ts file
+
 4.2 Write unit tests for services
+
 4.3 Write unit tests for pipes
+
 4.4 Write unit tests for attribute directives
 
 ### Evaluation Criteria
