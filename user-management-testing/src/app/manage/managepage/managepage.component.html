@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="create-btn container-fluid d-flex flex-row-reverse">      
+        <button class="btn btn-success btn-sm" (click)="createUser()">Create</button>
+    </div>
+</div>
+<div class="container-fluid d-flex flex-row">
+    <div class="list-users container-fluid my-3"> 
+        <app-users-list [users]="users" [callback]="showDetails" [btnText]="btnText"   [editDetails]="editDetails"></app-users-list>
+    </div>
+    <div class="child-manage container-fluid my-3">
+        <div class="outlet-container"><router-outlet></router-outlet></div>
+    </div>
+</div>  

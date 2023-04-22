@@ -1,0 +1,3 @@
+<div class="users-list"  *ngFor="let user of (filterType=='activeType'?(users | ActiveUserFilter): filterType=='deletedType' ? (users | DeletedUserFilter):users)">
+    <app-user [userData]="user" [btnText]="btnText" [callback]="callback" [editDetails]="editDetails"></app-user>
+</div>   

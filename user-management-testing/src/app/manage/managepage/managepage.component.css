@@ -1,0 +1,15 @@
+.list-users{
+    width:40%;
+}
+.child-manage{
+    width:60%;
+}
+.outlet-container{
+    position:fixed;
+    margin-left:-60px;
+    width:60%;
+}
+.create-btn{
+    position: fixed;
+    right:25px;
+}
