@@ -1,0 +1,33 @@
+<div class="user-detail container col-sm-10" *ngIf="selectedUser">
+    <div class="container-fluid my-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{(selectedUser.firstName | FullNameFilter:selectedUser.lastName) | titlecase}}</h5>
+                <p class="card-text"
+                    [ngClass]="{'text-success':!selectedUser.isDeleted,'text-danger':selectedUser.isDeleted}">
+                    {{selectedUser.isDeleted ?"Deleted": "Active"}}
+                </p> 
+                <div class="row mb-3">
+                    <div class="col-sm">Login Id</div>
+                    <div class="col-sm s-login">{{selectedUser.login}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">First Name</div>
+                    <div class="col-sm s-fname">{{selectedUser.firstName}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">Last Name</div>
+                    <div class="col-sm s-lname">{{selectedUser.lastName}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">Age</div>
+                    <div class="col-sm s-age">{{selectedUser.age}}</div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm">Last Updated</div>
+                    <div class="col-sm s-date">{{selectedUser.lastUpdated | dateFilter}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
